@@ -2,15 +2,17 @@ import Carousel from "react-bootstrap/Carousel";
 import {Button, Card, Col, Container, Row, Table} from "react-bootstrap";
 import {BsCheck2} from "react-icons/bs";
 
+const unit = 28
+
 const Program = () => {
 
     return(
-        <div id={'programWrapper'}>
+        <div style={{marginTop:`${unit*2}px`}} id={'programWrapper'}>
 
             <div id={'titleWrapper'}>
                 <h3 className={"text-primary ps-4"}>[갑사] 당일 템플스테이(단체 10명 이상 하루 체험)</h3>
             </div>
-            <div id={'imgWrapper'}>
+            <div style={{marginTop:`${unit*1}px`}} id={'imgWrapper'}>
                 <div id="carouseContainer">
 
                     <Carousel>
@@ -42,7 +44,7 @@ const Program = () => {
 
                 </div>
             </div>
-            <div id={'selectWrapper'}>
+            <div style={{marginTop:`${unit*1}px`}} id={'selectWrapper'}>
 
                 <Container id={'selectContainer'}>
                     <Row className={'d-flex justify-content-center'}>
@@ -81,7 +83,7 @@ const Program = () => {
                 <Container>
                     <Row className="justify-content-center">
                         <Col md={11}>
-                            <p>참가비용</p>
+                            <p className={'mb-2 fs-3 text-primary'}>참가비용</p>
                             <div id={'priceTableContainer'}>
                                 <Table striped bordered hover>
                                     <thead>
@@ -105,9 +107,9 @@ const Program = () => {
                 </Container>
 
             </div>
-            <div id={'contentWrapper'}>
+            <div  style={{marginTop:`${unit*4}px`}} id={'contentWrapper'}>
                 <div id={'contentContainer'}>
-                    <p>프로그램 소개</p>
+                    <p className="fs-3 fw-bold text-secondary">프로그램 소개</p>
                     <p>당일형
                         학교, 기업, 동호화, 모임 등 단체에서 진행하는 문화행사 일정의 일환으로 10명
 
@@ -124,15 +126,15 @@ const Program = () => {
                     </p>
                 </div>
             </div>
-            <div id={'scheduleWrapper'}>
+            <div style={{marginTop:`${unit*2}px`}} id={'scheduleWrapper'}>
                 <Container id={'scheduleContainer'}>
                     <Row>
                         <Col md={3}>
-                            <p>프로그램 일정</p>
+                            <p className={'fs-5 fw-bold'}>프로그램 일정</p>
                             <p>기타 코멘트</p>
                         </Col>
                         <Col md={9}>
-                            <p>원하는 날</p>
+                            <p className={'fs-5 fw-bold'}>원하는 날</p>
                             <Table>
                                 <thead>
                                     <tr>
@@ -154,11 +156,11 @@ const Program = () => {
                     </Row>
                 </Container>
             </div>
-            <div id={'otherProWrapper'}>
+            <div style={{marginTop:`${unit*2}px`, marginBottom:`${unit*5}px`}} id={'otherProWrapper'}>
 
                 <div id="programContainer">
-                    <h1 id="programTitle">다른 프로그램</h1>
-                    <Container>
+                    <p className={'fs-3 fw-bold text-secondary'} id="programTitle">다른 프로그램</p>
+                    <Container style={{marginTop:`${unit*2}px`}}>
                         <Row>
                             <Col md={4} style={{ flexBasis: '432px' }}><Card style={{ width: '100%' }}>
                                 <Card.Img variant="top" src="http://noms.templestay.com/images//RsImage/L_10908.png" style={{height: '280px'}}/>

@@ -4,11 +4,13 @@ import {Button, Card, Col, Container, Row} from "react-bootstrap";
 // 캐러셀에 들어갈 사진은 서버에서 불러온 다음에 제공되어야 한다. 만약 그렇지 않으면 페이지가 로드된 후에 다운받기 때문에 잘린 이미지나,
 // 빈 화면이 표시 될 수 있다.
 
+const unit = 28
+
 const temple = () => {
 
     return(
         <div id="templeWrapper">
-            <div id="carouselWrapper">
+            <div id="carouselWrapper" style={{marginTop:`${unit*2}px`}}>
                 <div id="carouseContainer">
 
                     <Carousel>
@@ -41,11 +43,11 @@ const temple = () => {
                 </div>
             </div>
 
-            <div id="contentWrapper">
+            <div id="contentWrapper" style={{marginTop:`${unit*5}px`}}>
                 <div id="contentContainer">
                     <h1 className="fw-bold text-secondary ps-4"
                         id="contentTitle">소중한 나, 연꽃 미소</h1>
-                    <p className="fs-4 pt-3"
+                    <p className="fs-4 pt-3" style={{marginTop:`${unit*2}px`}}
                        id="content">
                         <span className="h1 text-primary">갑사 </span>
                         1,600여년의 역사와 문화를 간직한 계룡산 갑사에서의 템플스테이 !!! 갑사 용솟음 템플스테이는 여러분 마음 속 깊은
@@ -66,7 +68,7 @@ const temple = () => {
                 </div>
             </div>
 
-            <div className="bg-light border-top border-bottom border-1 border-primary" id="mapWrapper">
+            <div className="bg-light border-top border-bottom border-1 border-primary"style={{marginTop:`${unit*5}px`}} id="mapWrapper">
                 <Container id="mapContainer">
                     <Row id="mapRow">
 
@@ -91,11 +93,11 @@ const temple = () => {
                 </Container>
             </div>
 
-            <div id="programWrapper">
+            <div style={{marginTop:`${unit*5}px`}} id="programWrapper">
 
-                <div id="programContainer">
-                    <h1 id="programTitle">프로그램</h1>
-                    <Container>
+                <div style={{marginBottom:`${unit*5}px`}} id="programContainer">
+                    <h1 className="fw-bold text-secondary ps-4" id="programTitle">프로그램</h1>
+                    <Container style={{marginTop:`${unit*2}px`}} id={'cardContainer'}>
                         <Row>
                             <Col md={4} style={{ flexBasis: '432px' }}><Card style={{ width: '100%' }}>
                                 <Card.Img variant="top" src="https://noms.templestay.com/images//RsImage/L_2231.png" style={{height: '280px'}}/>
