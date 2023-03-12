@@ -1,5 +1,5 @@
 import Carousel from 'react-bootstrap/Carousel';
-import {Col, Container, Row} from "react-bootstrap";
+import {Button, Card, Col, Container, Row} from "react-bootstrap";
 
 // 캐러셀에 들어갈 사진은 서버에서 불러온 다음에 제공되어야 한다. 만약 그렇지 않으면 페이지가 로드된 후에 다운받기 때문에 잘린 이미지나,
 // 빈 화면이 표시 될 수 있다.
@@ -7,39 +7,39 @@ import {Col, Container, Row} from "react-bootstrap";
 const temple = () => {
 
     return(
-        <div id="mainWrapper">
+        <div id="templeWrapper">
             <div id="carouselWrapper">
-            <div id="carouseContainer">
+                <div id="carouseContainer">
 
-                <Carousel>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src="https://noms.templestay.com/images/TiImage/H/L/7311.png"
-                            alt="First slide"
-                            height="800px"
-                        />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src="https://noms.templestay.com/images/TiImage/H/L/7322.png"
-                            alt="Second slide"
-                            height="800px"
-                        />
-                    </Carousel.Item>
-                    <Carousel.Item>
-                        <img
-                            className="d-block w-100"
-                            src="https://noms.templestay.com/images/TiImage/H/L/1372.png"
-                            alt="Third slide"
-                            height="800px"
-                        />
-                    </Carousel.Item>
-                </Carousel>
+                    <Carousel>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src="https://noms.templestay.com/images/TiImage/H/L/7311.png"
+                                alt="First slide"
+                                height="800px"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src="https://noms.templestay.com/images/TiImage/H/L/7322.png"
+                                alt="Second slide"
+                                height="800px"
+                            />
+                        </Carousel.Item>
+                        <Carousel.Item>
+                            <img
+                                className="d-block w-100"
+                                src="https://noms.templestay.com/images/TiImage/H/L/1372.png"
+                                alt="Third slide"
+                                height="800px"
+                            />
+                        </Carousel.Item>
+                    </Carousel>
 
+                </div>
             </div>
-        </div>
 
             <div id="contentWrapper">
                 <div id="contentContainer">
@@ -92,110 +92,38 @@ const temple = () => {
             </div>
 
             <div id="programWrapper">
+
                 <div id="programContainer">
-                    <h1 className="fw-bold text-secondary mb-5pb-4 ps-4"
-                        id="programTitle">프로그램</h1>
-                    <div className="row"
-                         id="programRow"
-                        <div className="col-md-4 pb-3">
-                            <div className="card">
-                                <img src="../img/programimg/L_2231.png" className="card-img-top" alt="..." height="278">
-                                    <div className="card-body">
-                                        <h5 className="card-title" style="height:70px">[갑사] 당일 템플스테이(단체 10명 이상 하루
-                                            체험)</h5>
-                                        <p>
-                                            <a className="btn btn-primary" data-bs-toggle="collapse" href=".btnDisplay"
-                                               role="button" aria-expanded="false" aria-controls="collapseExample">
-                                                설명 보기
-                                            </a>
-                                            <a href="#" className="btn btn-primary">Go somewhere</a>
-                                        </p>
-                                        <div className="collapse btnDisplay">
-                                            <div className="card card-body">
-                                                학교, 기업, 동호화, 모임 등 단체에서 진행하는 문화행사 일정의 일환으로 10명
-
-                                                이상의 참가자를 대상으로 당일 최소 2시간부터 최대 5시간 동안 사찰의 전통
-
-                                                문화를 체험 할 수 있습니다.
-
-                                                참가비는 3만원부터 시작합니다.
-
-                                                * 10인 이상시에만 진행합니다.
-
-                                                * 원하는 프로그램이 있으면 맞춤형으로 진행 가능 합니다.
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4 pb-3">
-                            <div className="card" style="width: 100%">
-                                <img src="../img/programimg/L_2401.png" className="card-img-top" alt="..." width="416"
-                                     height="278">
-                                    <div className="card-body">
-                                        <h5 className="card-title" style="height:70px">[갑사] [2022 문화가있는날] 템플스테이</h5>
-                                        <p>
-                                            <a className="btn btn-primary" data-bs-toggle="collapse" href=".btnDisplay"
-                                               role="button" aria-expanded="false" aria-controls="collapseExample">
-                                                설명 보기
-                                            </a>
-                                            <a href="#" className="btn btn-primary">Go somewhere</a>
-                                        </p>
-                                        <div className="collapse btnDisplay">
-                                            <div className="card card-body">
-                                                학교, 기업, 동호화, 모임 등 단체에서 진행하는 문화행사 일정의 일환으로 10명
-
-                                                이상의 참가자를 대상으로 당일 최소 2시간부터 최대 5시간 동안 사찰의 전통
-
-                                                문화를 체험 할 수 있습니다.
-
-                                                참가비는 3만원부터 시작합니다.
-
-                                                * 10인 이상시에만 진행합니다.
-
-                                                * 원하는 프로그램이 있으면 맞춤형으로 진행 가능 합니다.
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                        <div className="col-md-4 pb-3">
-                            <div className="card" style="width: 100%">
-                                <img src="../img/programimg/L_11381.png" className="card-img-top" alt="..." width="416"
-                                     height="278">
-                                    <div className="card-body">
-                                        <h5 className="card-title" style="height:70px">[갑사] 주말 휴일 템플스테이</h5>
-                                        <p>
-                                            <a className="btn btn-primary" data-bs-toggle="collapse" href=".btnDisplay"
-                                               role="button" aria-expanded="false" aria-controls="collapseExample">
-                                                설명 보기
-                                            </a>
-                                            <a href="#" className="btn btn-primary">Go somewhere</a>
-                                        </p>
-                                        <div className="collapse btnDisplay">
-                                            <div className="card card-body">
-                                                학교, 기업, 동호화, 모임 등 단체에서 진행하는 문화행사 일정의 일환으로 10명
-
-                                                이상의 참가자를 대상으로 당일 최소 2시간부터 최대 5시간 동안 사찰의 전통
-
-                                                문화를 체험 할 수 있습니다.
-
-                                                참가비는 3만원부터 시작합니다.
-
-                                                * 10인 이상시에만 진행합니다.
-
-                                                * 원하는 프로그램이 있으면 맞춤형으로 진행 가능 합니다.
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div>
-                        </div>
-                    </div>
-
+                    <h1 id="programTitle">프로그램</h1>
+                    <Container>
+                        <Row>
+                            <Col md={4} style={{ flexBasis: '432px' }}><Card style={{ width: '100%' }}>
+                                <Card.Img variant="top" src="https://noms.templestay.com/images//RsImage/L_2231.png" style={{height: '280px'}}/>
+                                <Card.Body>
+                                    <Card.Title style={{height:`70px`}}>[갑사] 당일 템플스테이(단체 10명 이상 하루 체험)
+                                    </Card.Title>
+                                    <Button variant="primary">예약하러 가기</Button>
+                                </Card.Body>
+                            </Card></Col>
+                            <Col md={4} style={{ flexBasis: '432px' }}><Card style={{ width: '100%' }}>
+                                <Card.Img variant="top" src="https://noms.templestay.com/images//RsImage/L_11381.png" style={{height: '280px'}} />
+                                <Card.Body>
+                                    <Card.Title style={{height:`70px`}}>[갑사] [2022 문화가있는날] 템플스테이</Card.Title>
+                                    <Button variant="primary">예약하러 가기</Button>
+                                </Card.Body>
+                            </Card></Col>
+                            <Col md={4} style={{ flexBasis: '432px' }}><Card style={{ width: '100%' }}>
+                                <Card.Img variant="top" src="https://noms.templestay.com/images//RsImage/L_2401.png" style={{height: '280px'}} />
+                                <Card.Body>
+                                    <Card.Title style={{height:`70px`}}>[갑사] 주말 휴일 템플스테이</Card.Title>
+                                    <Button variant="primary">예약하러 가기</Button>
+                                </Card.Body>
+                            </Card></Col>
+                        </Row>
+                    </Container>
                 </div>
 
             </div>
-
 
         </div>
     )
