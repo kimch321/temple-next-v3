@@ -1,44 +1,42 @@
+import Carousel from 'react-bootstrap/Carousel';
+import {Button, Card, Col, Container, Row} from "react-bootstrap";
+import axios from 'axios'
+
 // 캐러셀에 들어갈 사진은 서버에서 불러온 다음에 제공되어야 한다. 만약 그렇지 않으면 페이지가 로드된 후에 다운받기 때문에 잘린 이미지나,
 // 빈 화면이 표시 될 수 있다.
 
-// css 단위 변수
-import Carousel from "react-bootstrap/Carousel";
-import {Button, Col, Container, Card, Row} from "react-bootstrap";
+export async function getServerSideProps(ctx) {
 
+    let url = `http://localhost:3000/api/temple?id=갑사`
+    const res = await axios.get(url)
+
+    let {temple, templePic} = await res.data;
+
+    return {props:{temple,templePic}}
+}
+
+
+// css 단위 변수
 const unit = 28
 
-const temple = () => {
+const temple = ({temple,templePic}) => {
 
     return(
         <div id="templeWrapper">
             <div id="carouselWrapper" style={{marginTop:`${unit*2}px`}}>
                 <div id="carouseContainer">
-
                     <Carousel>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src="https://noms.templestay.com/images/TiImage/H/L/7311.png"
-                                alt="First slide"
-                                height="800px"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src="https://noms.templestay.com/images/TiImage/H/L/7322.png"
-                                alt="Second slide"
-                                height="800px"
-                            />
-                        </Carousel.Item>
-                        <Carousel.Item>
-                            <img
-                                className="d-block w-100"
-                                src="https://noms.templestay.com/images/TiImage/H/L/1372.png"
-                                alt="Third slide"
-                                height="800px"
-                            />
-                        </Carousel.Item>
+                        {templePic.map(pic => (
+                            <Carousel.Item>
+                                <img
+                                    className="d-block w-100"
+                                    src={pic.T_PICTURE}
+                                    key={pic.T_NAME}
+                                    alt="First slide"
+                                    height="800px"
+                                />
+                            </Carousel.Item>
+                        ))}
                     </Carousel>
 
                 </div>
